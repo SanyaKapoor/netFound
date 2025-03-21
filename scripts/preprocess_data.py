@@ -100,13 +100,12 @@ def main():
     for folder in ["filtered", "split", "extracted", "final", "final/shards"]:
         os.makedirs(os.path.join(input_folder, folder), exist_ok=True)
 
-    match action:
-        case "pretrain":
-            preprocess_pretrain(args)
-        case "finetune":
-            preprocess_finetune(args)
-        case _:
-            raise ValueError("Unexpected action")
+    if action == "start":
+        print("Starting process")
+    elif action == "stop":
+        print("Stopping process")
+    else:
+        print("Unknown action")
 
     return
 
