@@ -1,0 +1,3 @@
+- git pull after installed certificate and accessing internet
+- renamed folders to format expected
+Challenge: unable to get docker and python 3.10
